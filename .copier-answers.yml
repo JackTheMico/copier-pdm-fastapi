@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier
+_commit: 1.2.6
+_src_path: gh:pawamoy/copier-pdm
+author_email: dlwxxxdlw@gmail.com
+author_fullname: Jack Wenyoung
+author_username: JackTheMico
+copyright_date: '2024'
+copyright_holder: Jack Wenyoung
+copyright_holder_email: dlwxxxdlw@gmail.com
+copyright_license: MIT License
+insiders: false
+project_description: A fastapi startup built on copier-pdm
+project_name: copier-pdm-fastapi
+python_package_command_line_name: ''
+python_package_distribution_name: copier-pdm-fastapi
+python_package_import_name: copier_pdm_fastapi
+repository_name: copier-pdm-fastapi
+repository_namespace: JackTheMico
+repository_provider: github.com
+
