@@ -37,5 +37,5 @@
       ]
     }
   },
-  "postCreateCommand": "make setup"
+  "postCreateCommand": "./scripts/prerequisites.sh && make setup"
 }
