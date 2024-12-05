@@ -19,7 +19,6 @@ echo 'eval "$(pyenv init -)"' >>~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >>~/.bashrc
 
 echo "Prequisites: Pyenv Install Python Versions"
-echo "PDM Multirun Versions: ${PDM_MULTIRUN_VERSIONS}"
 
 if [ -n "${PDM_MULTIRUN_VERSIONS}" ]; then
   echo "PDM Multirun Versions: ${PDM_MULTIRUN_VERSIONS}"
@@ -27,6 +26,7 @@ if [ -n "${PDM_MULTIRUN_VERSIONS}" ]; then
   echo "VERSIONS: ${VERSIONS[@]}"
   if [ "${PDM_MULTIRUN_USE_VENVS}" -eq "1" ]; then
     for version in ${VERSIONS[@]}; do
+      echo "Prequisites: PyENV Installing: ${version}"
       /home/vscode/.pyenv/bin/pyenv install "${version}"
     done
   fi

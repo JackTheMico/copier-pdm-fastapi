@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Makefile PDM Install Environments And Dependencies"
+echo "Setup: PDM Install Environments And Dependencies"
 
 if ! command -v pdm &>/dev/null; then
   if ! command -v pipx &>/dev/null; then
@@ -17,9 +17,11 @@ echo "PDM_MULTIRUN_VERSIONS=${PDM_MULTIRUN_VERSIONS}"
 echo "PDM_MULTIRUN_USE_VENVS=${PDM_MULTIRUN_USE_VENVS}"
 
 if [ -n "${PDM_MULTIRUN_VERSIONS}" ]; then
+  IFS=';' read -ra VERSIONS <<<"${PDM_MULTIRUN_VERSIONS}"
   if [ "${PDM_MULTIRUN_USE_VENVS}" -eq "1" ]; then
-    for version in ${PDM_MULTIRUN_VERSIONS}; do
+    for version in ${VERSIONS[@]}; do
       if ! pdm venv --path "${version}" &>/dev/null; then
+        echo "Setup: PDM Multirun Creating: ${version}"
         pdm venv create --name "${version}" "${version}"
       fi
     done
