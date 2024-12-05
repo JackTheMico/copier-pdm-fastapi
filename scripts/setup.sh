@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
+
+echo $PATH
 
 if ! command -v pdm &>/dev/null; then
   if ! command -v pipx &>/dev/null; then
