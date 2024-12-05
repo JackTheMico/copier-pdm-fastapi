@@ -17,9 +17,9 @@ echo "PDM_MULTIRUN_VERSIONS=${PDM_MULTIRUN_VERSIONS}"
 echo "PDM_MULTIRUN_USE_VENVS=${PDM_MULTIRUN_USE_VENVS}"
 
 if [ -n "${PDM_MULTIRUN_VERSIONS}" ]; then
-  IFS=';' read -ra VERSIONS <<<"${PDM_MULTIRUN_VERSIONS}"
+  # IFS=';' read -ra VERSIONS <<<"${PDM_MULTIRUN_VERSIONS}"
   if [ "${PDM_MULTIRUN_USE_VENVS}" -eq "1" ]; then
-    for version in ${VERSIONS[@]}; do
+    for version in ${PDM_MULTIRUN_VERSIONS}; do
       if ! pdm venv --path "${version}" &>/dev/null; then
         echo "Setup: PDM Multirun Creating: ${version}"
         pdm venv create --name "${version}" "${version}"
