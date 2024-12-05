@@ -24,7 +24,7 @@ echo "Prequisites: Pyenv Install Python Versions"
 if [ -n "${PDM_MULTIRUN_VERSIONS}" ]; then
   if [ "${PDM_MULTIRUN_USE_VENVS}" -eq "1" ]; then
     for version in ${PDM_MULTIRUN_VERSIONS}; do
-      pyenv install "${version}"
+      /home/vscode/.pyenv/bin/pyenv install "${version}"
     done
   fi
   pdm multirun -v pdm install -G:all
