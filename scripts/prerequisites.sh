@@ -8,6 +8,8 @@ if ! command -v pdm &>/dev/null; then
     python3 -m pip install --user pipx
   fi
   pipx install pdm
+  pipx inject pdm pdm-multirun
+  echo "Prequisites: Start To Install PyENV"
   curl https://pyenv.run | bash
 fi
 
