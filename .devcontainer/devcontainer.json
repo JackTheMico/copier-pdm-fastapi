@@ -2,7 +2,7 @@
   "name": "Python 3 with FastAPI",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
   "forwardPorts": [
-    5000
+    5000, 8000
   ],
   "customizations": {
     "vscode": {
@@ -23,6 +23,7 @@
       },
       "extensions": [
         "ms-python.python",
+        "ms-python.debugpy",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
         "ms-python.isort",
