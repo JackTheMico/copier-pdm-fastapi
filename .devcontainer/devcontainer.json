@@ -35,5 +35,5 @@
       ]
     }
   },
-  "postCreateCommand": "make setup && pdm run duty vscode"
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh"
 }
