@@ -2,16 +2,20 @@
   "name": "Python 3 with FastAPI",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
   "forwardPorts": [
-    8000
+    5000
   ],
   "customizations": {
     "vscode": {
       "settings": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "editor.formatOnSave": true,
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
-        "python.formatting.provider": "black",
-        "editor.formatOnSave": true,
         "isort.args": [
           "--profile",
           "black"
@@ -21,7 +25,13 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
-        "charliermarsh.ruff"
+        "ms-python.isort",
+        "charliermarsh.ruff",
+        "technosophos.vscode-make",
+        "cameron.vscode-pytest",
+        "pamaron.pytest-runner",
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml"
       ]
     }
   },
