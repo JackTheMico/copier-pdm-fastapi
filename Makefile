@@ -41,7 +41,7 @@ setup:
 	@bash scripts/setup.sh
 
 devstart:
-	@python main.py
+	@pdm run python main.py
 
 .PHONY: check
 check:

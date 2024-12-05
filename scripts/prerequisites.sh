@@ -9,6 +9,7 @@ if ! command -v pdm &>/dev/null; then
   fi
   pipx install pdm
   pipx inject pdm pdm-multirun
+  pdm config venv.in_project false
   echo "Prequisites: Start To Install PyENV"
   curl https://pyenv.run | bash
 fi
